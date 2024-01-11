@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Burger Menu Test</title>
+</head>
+<body>
+    <div class="nav" id="nav-bar">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a class="icon" onclick="burgerMenu()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    
+    <div class="info">
+        <h2>Responsive Test</h2>
+        <p>yay. 
+        </p>
+    </div>
+    
+    <script>
+    function burgerMenu() {
+        let burger = document.getElementById("nav-bar");
+        if (burger.className === "nav") {
+        burger.className += " responsive";
+        } else {
+        burger.className = "nav";
+        }
+    }
+    </script>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dropdown test.css">
+    <title>Drop-down Test</title>
+</head>
+<body>
+    <div class="nav" id="drop-nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <div class="dropdown">
+          <button class="dropbtn">Dropdown 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div> 
+        <a href="#about">About</a>
+        <a class="icon" onclick="dropNav()"><i class="fa fa-bars"></i></a>
+      </div>
+      
+      <div style="padding-left:16px">
+        <h2>Responsive Topnav with Dropdown</h2>
+      </div>
+      
+      <script>
+      function dropNav() {
+        let drop = document.getElementById("drop-nav");
+        if (drop.className === "nav") {
+          drop.className += " responsive";
+        } else {
+          drop.className = "nav";
+        }
+      }
+      </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="overlay test.css">
+    <title>Overlay Navigation</title>
+</head>
+<body>
+    <div id="myNav" class="overlay">
+        <a class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      
+      <h2>Fullscreen Overlay</h2>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+      
+      <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+      
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+      </script>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="side test.css">
+  <title>Side Navigation</title>
+</head>
+
+<body>
+  <div id="side-nav" class="nav">
+    <button class="closebtn" onclick="closeNav()">&times;</button>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div id="main">
+    <h2>Sidenav Push TEst</h2>
+    <span class="open-btn" onclick="openNav()">&#9776; open</span>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("side-nav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("side-nav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  </script>
+
+</body>
+
+</html>
